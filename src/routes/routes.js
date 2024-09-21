@@ -12,15 +12,17 @@ const routes = [
       {
         path: '/dashboard',
         name: 'dashboard',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
+        component: () => import('../views/Dashboard.vue')
       },
       {
         path: '/profile',
         name: 'profile',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
+        component: () => import('../views/Pages/UserProfile.vue')
+      },
+      {
+        path: '/typing',
+        name: 'typing',
+        component: () => import('../views/typingPal/Typing.vue')
       },
     ]
   },
@@ -32,17 +34,12 @@ const routes = [
       {
         path: '/login',
         name: 'login',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Login.vue')
+        component: () => import('../views/Pages/Login.vue')
       },
       {
         path: '/register',
         name: 'register',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/Register.vue')
-      },
-      {
-        path: '/typing',
-        name: 'typing',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/typingPal/Typing.vue')
       },
       { path: '*', component: NotFound }
     ]
